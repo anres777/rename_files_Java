@@ -1,6 +1,9 @@
 
 package renombradorarchivos;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+
 
 public class ventana01 extends javax.swing.JFrame {
 
@@ -39,6 +42,7 @@ public class ventana01 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 254, 252));
+        setIconImage(getIconImage());
 
         jPanel4.setBackground(new java.awt.Color(247, 243, 224));
 
@@ -315,6 +319,15 @@ public class ventana01 extends javax.swing.JFrame {
                 new ventana01().setVisible(true);
             }
         });
+    }
+    
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().
+                getImage(ClassLoader.getSystemResource("imagenes/logo.png"));
+
+
+        return retValue;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
